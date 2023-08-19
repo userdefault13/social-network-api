@@ -43,16 +43,6 @@ const updateUser = async (req, res) => {
   }
 };
 
-// const updateUser = async (req, res) => {
-//   try {
-//     const user = await User.findOneAndUpdate({ id: req.params.id }, req.body);
-//     await getUserById(req, res);
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).send(err);
-//   }
-// };
-
 const deleteUser = async (req, res) => {
   try {
     const user = await User.findOneAndRemove({ _id: req.params.id });
