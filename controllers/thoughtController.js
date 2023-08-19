@@ -48,21 +48,6 @@ const updateThought = async (req, res) => {
   }
 };
 
-// const updateThought = async (req, res) => {
-//   try {
-//     let thought = await Thought.findOneAndUpdate(
-//       { id: req.params.id },
-//       req.body
-//     );
-
-//     thought = await Thought.findById(req.params.id);
-//     res.send(thought);
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).send(err);
-//   }
-// };
-
 const deleteThought = async (req, res) => {
   try {
     const thought = await Thought.findOneAndRemove({ _id: req.params.id });
